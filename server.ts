@@ -44,7 +44,7 @@ async function startServer() {
   const app = express();
   app.use(express.json());
 
-  const PORT = process.env.PORT || 3000;
+  const PORT = Number(process.env.PORT) || 3000;
 
   // ==========================
   // API ROUTE
@@ -141,4 +141,5 @@ Return ONLY the translated sentence.
 }
 
 startServer();
+
 
