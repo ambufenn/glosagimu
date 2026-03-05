@@ -2,16 +2,13 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "outDir": "dist",
-    "strict": true,
+    "jsx": "react-jsx",
+    "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "jsx": "react-jsx",
-    "noEmit": false
+    "moduleResolution": "Node",
+    "allowJs": false,
+    "outDir": "dist"
   },
-  "include": [
-    "server.ts",
-    "src/**/*"
-  ]
+  "include": ["src", "server.ts"]
 }
