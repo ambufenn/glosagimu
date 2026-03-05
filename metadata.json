@@ -1,0 +1,5 @@
+{
+  "name": "Glossa",
+  "description": "Neural-to-Speech system for silent patients (Stroke/ALS) using micro-pressure signals and Gemini AI.",
+  "requestFramePermissions": []
+}
