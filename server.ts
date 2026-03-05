@@ -13,6 +13,10 @@ const __dirname = path.dirname(__filename);
 // --- Glossa Neural Engine Simulation ---
 class GlossaNeuralEngine {
   processSignals(signals: number[]): string {
+    if (!signals || signals.length === 0) {
+      return "INTENT_UNKNOWN";
+    }
+
     const avg = signals.reduce((a, b) => a + b, 0) / signals.length;
     const max = Math.max(...signals);
 
@@ -20,6 +24,7 @@ class GlossaNeuralEngine {
     if (max > 0.6 && avg > 0.3) return "INTENT_THIRSTY";
     if (max > 0.4 && avg > 0.2) return "INTENT_GREETING";
     if (max < 0.2) return "INTENT_REST";
+
     return "INTENT_UNKNOWN";
   }
 }
@@ -136,3 +141,4 @@ Return ONLY the translated sentence.
 }
 
 startServer();
+
